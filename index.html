@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    htm
+</head>
+<body>
+<div class="container-fluid p-0">
+    <div class="row">
+        <div class="col-12">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed top-0 w-100" id="nav">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">JusWise</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-md-4 me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="#contact" tabindex="-1" aria-disabled="true">Contact Us</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Documation
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Myanmar Cutomary Law</a></li>
+                                    <li><a class="dropdown-item" href="#">Internation Law</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+<!--                                    <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+                                </ul>
+                            </li>
+
+                        </ul>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row min-vh-100 mt-5" id="home">
+        <div class="col-12">
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row min-vh-100 mt-5" id="about">
+        <div class="col-12">
+
+            <div class="bg-primary p-3  d-flex align-items-center justify-content-between" style="margin-top: 70px">
+                <h4>>U Ba Vs Daw Mya | 2020 | Trepassing | Township Court >>  </h4>
+                <button class="btn btn-secondary" id="btn" onclick="show()">More Detail</button>
+            </div>
+            <div class="w-100">
+             <table id="one" class="w-100 h-100">
+                    <tr>
+                        <th>Company</th>
+                        <th>Contact</th>
+                        <th>Country</th>
+                    </tr>
+                    <tr>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                    </tr>
+                    <tr>
+                        <td>Centro comercial Moctezuma</td>
+                        <td>Francisco Chang</td>
+                        <td>Mexico</td>
+                    </tr>
+                    <tr>
+                        <td>Ernst Handel</td>
+                        <td>Roland Mendel</td>
+                        <td>Austria</td>
+                    </tr>
+                    <tr>
+                        <td>Island Trading</td>
+                        <td>Helen Bennett</td>
+                        <td>UK</td>
+                    </tr>
+                    <tr>
+                        <td>Laughing Bacchus Winecellars</td>
+                        <td>Yoshi Tannamuri</td>
+                        <td>Canada</td>
+                    </tr>
+                    <tr>
+                        <td>Magazzini Alimentari Riuniti</td>
+                        <td>Giovanni Rovelli</td>
+                        <td>Italy</td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row min-vh-100" id="contact">
+        <div class="col-12">
+
+        </div>
+    </div>
+</div>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="node_modules/waypoints/lib/noframework.waypoints.min.js"></script>
+<script>
+    var waypoint2 = new Waypoint({
+        element: document.getElementById('about'),
+        handler: function(direction) {
+            if(direction==="down"){
+                document.getElementById("nav").classList.add("shadow-lg");
+
+            }
+            else{
+                document.getElementById("nav").classList.remove("shadow-lg");
+            }
+        },
+        offset:"75%"
+    });
+    function show() {
+        let a= document.getElementById("one");
+        a.classList.toggle("show")
+        console.log("hello");
+
+
+    }
+</script>
+</body>
+</html>
